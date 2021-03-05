@@ -4,20 +4,18 @@
 --| General
 --| Navbar
 --| Search Form
---| [SECTION] Above the Fold 
+--| [SECTION] Above the Fold
 --| [SECTION] Features
 --| [SECTION][RESULTS PAGE] Result
 --| [SECTION][RESULTS PAGE] Search Again
 --| Footer
 --------------------------------------------------------
 ----------------------------------------------------- */
-
 /* ************************************************************
 ***************************************************************
 --- General ---
 ***************************************************************
 ************************************************************ */
-
 body {
   font-family: 'Lato', sans-serif;
   color: #000;
@@ -87,7 +85,6 @@ section {
 --- Navbar ---
 ***************************************************************
 ************************************************************ */
-
 .navbar {
   background: #004A80;
 }
@@ -101,7 +98,6 @@ section {
 --- Search Form ---
 ***************************************************************
 ************************************************************ */
-
 .btn-form-submit {
   font-size: 24px;
   font-weight: bold;
@@ -119,7 +115,7 @@ section {
 .input-group > .form-control {
   height: 70px;
   background: #FFF;
-  box-shadow: inset 0 -1px 4px 0 rgba(0,0,0,0.20);
+  box-shadow: inset 0 -1px 4px 0 rgba(0, 0, 0, 0.20);
   border-radius: 3px !important;
   font-size: 22px;
 }
@@ -181,7 +177,6 @@ section {
 --- [SECTION] Above the Fold ---
 ***************************************************************
 ************************************************************ */
-
 .above-the-fold {
   background: #004A80;
   padding-top: 24px;
@@ -197,7 +192,6 @@ section {
 --- [SECTION] Features ---
 ***************************************************************
 ************************************************************ */
-
 .features {
   background-image: linear-gradient(0deg, #E6E6E6 0%, #FFFFFF 100%);
 }
@@ -277,7 +271,6 @@ section {
 --- [SECTION][RESULTS PAGE] Result ---
 ***************************************************************
 ************************************************************ */
-
 .result {
   background: #F8F8F8;
   min-height: 455px;
@@ -293,7 +286,7 @@ section {
 .result-card {
   max-width: 980px;
   background: #fff;
-  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.50);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.50);
   border-radius: 30px;
   padding: 40px;
   margin: 40px auto;
@@ -343,7 +336,6 @@ section {
 --- [SECTION][RESULTS PAGE] Search Again ---
 ***************************************************************
 ************************************************************ */
-
 .search-again {
   background: #004A80;
 }
@@ -365,7 +357,6 @@ section {
 --- Footer ---
 ***************************************************************
 ************************************************************ */
-
 .footer {
   padding: 16px 0;
 }
