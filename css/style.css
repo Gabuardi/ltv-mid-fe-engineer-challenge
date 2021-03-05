@@ -98,55 +98,72 @@ section {
 --- Search Form ---
 ***************************************************************
 ************************************************************ */
-.btn-form-submit {
-  font-size: 24px;
-  font-weight: bold;
-  color: #004A80;
-  background-image: linear-gradient(225deg, #F2DA56 0%, #F6BC25 100%);
-  box-shadow: 0 3px 0 0 #A6953B, inset 0 1px 0 0 #FFFFFF;
-  border-radius: 6px;
-  outline: 0;
-  appearance: none;
-  -webkit-appearance: none;
-  width: 180px;
-  margin-left: 20px;
+
+.form-row {
+  margin-right: -10px;
+  margin-left: -10px;
+}
+.form-row > .col,
+.form-row > [class*=col-] {
+  padding-right: 10px;
+  padding-left: 10px;
 }
 
-.input-group > .form-control {
-  height: 70px;
+.form-group {
+  margin-bottom: 12px;
+}
+
+.btn {
+  width: 100%;
+  height: 50px;
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 6px;
+  color: #004A80;
+  outline: 0;
+  background-image: linear-gradient(225deg, #F2DA56 0%, #F6BC25 100%);
+  box-shadow: 0 3px 0 0 #A6953B, inset 0 1px 0 0 #FFFFFF;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.form-control {
+  height: 50px;
   background: #FFF;
   box-shadow: inset 0 -1px 4px 0 rgba(0, 0, 0, 0.20);
   border-radius: 3px !important;
   font-size: 22px;
 }
 
-.input-group.error > .form-control {
+.form-control:focus {
+  box-shadow: inset 0 -1px 4px 0 rgba(0, 0, 0, 0.20);
+}
+
+.form-control.error {
   border: 3px solid #DC0015;
   border-radius: 3px 3px 0 0 !important;
 }
 
-.error-msg {
+.form-group__error-message {
+  padding: 4px 12px;
   display: none;
+  font-size: 16px;
+  border-radius: 0 0 3px 3px;
+  color: #FFF;
+  background: #DC0015;
 }
 
-.input-group.error .error-msg {
+.form-control.error + .form-group__error-message {
   display: block;
-  position: absolute;
-  bottom: -30px;
-  margin: 0px;
-  padding: 4px 12px;
-  background: #DC0015;
-  color: #FFF;
-  border-radius: 0 0 3px 3px;
-  font-size: 16px;
 }
 
 .form-control::placeholder {
-  color: #9B9B9B;
   font-size: 16px;
   font-weight: bold;
-  text-transform: uppercase;
   letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #9B9B9B;
 }
 
 .form-subtext {
@@ -156,19 +173,13 @@ section {
   line-height: normal;
 }
 
-@media (max-width: 767px) {
-  .input-group {
-    flex-direction: column;
+@media (min-width: 768px) {
+  .form-control,
+  .btn {
+    height: 70px;
   }
-  .input-group > .form-control,
-  .btn-form-submit {
-    width: 100%;
-  }
-  .input-group > .form-control {
-    height: 50px;
-  }
-  .btn-form-submit {
-    margin: 12px 0 0 0;
+  .form-group__error-message {
+    position: absolute;
   }
 }
 

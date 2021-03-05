@@ -26,7 +26,7 @@ $(document).ready(function () {
         })
         .catch((e) => console.log(e));
     } else if (x !== true) {
-      document.querySelector('input[type="text"]').parentNode.classList.add("error");
+      document.querySelector('input[type="text"]').classList.add("error");
     }
   });
 
