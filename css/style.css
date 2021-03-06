@@ -87,10 +87,16 @@ section {
 ************************************************************ */
 .navbar {
   background: #004A80;
+  padding: 20px 15px;
 }
 
-.navbar {
-  padding: 20px 16px;
+.navbar-brand {
+  padding: 0;
+  width: 173px;
+}
+
+.navbar__search-icon {
+  width: 23px;
 }
 
 /* ************************************************************
