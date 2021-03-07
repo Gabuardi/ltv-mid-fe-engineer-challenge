@@ -24,31 +24,31 @@
   </div>
 </nav>
 
-<section class="above-the-fold">
+<!-- ---------------------------- -->
+<!-----------<< HEADER >>----------->
+<header class="bg-primary">
   <div class="container">
-    <div class="headline text-white text-center mb-4 mb-md-5">
+    <div class="header__headline text-center text-white mb-4 mb-md-5">
       <h1 class="mb-3">Start Your Search!</h1>
       <h2>Look up for people’s name, photos and online profiles with their email address or phone number. See what you find!</h2>
     </div>
-
     <!----<< SEARCH FORM >>---->
-    <form>
-      <div class="form-row">
-        <div class="form-group col">
-          <input class="form-control" type="text" name="email" placeholder="Enter an Email Address" aria-label="email address">
-          <div class="form-group__error-message">Please enter a valid email address</div>
-        </div>
-        <div class="form-group col-md-3 col-lg-2">
-          <button id="btn-search" class="btn" type="submit">Go!</button>
-        </div>
+    <form class="form-row">
+      <div class="form-group col">
+        <input class="form-control" type="text" name="email" placeholder="Enter an Email Address" aria-label="email address">
+        <div class="form-group__error-message">Please enter a valid email address</div>
       </div>
-      <div class="d-flex justify-content-start justify-content-md-end align-items-center mt-4">
-        <img src="img/icn_lock.svg" alt="lock">
-        <p class="form-subtext">People in the search won't be notified.</p>
+      <div class="form-group col-md-3 col-lg-2">
+        <button id="btn-search" class="btn" type="submit">Go!</button>
       </div>
     </form>
+
+    <div class="d-flex justify-content-start justify-content-md-end align-items-center mt-3">
+      <img src="img/icn_lock.svg" alt="lock">
+      <p class="header__help-text">People in the search won't be notified.</p>
+    </div>
   </div>
-</section>
+</header>
 
 <section class="features">
   <div class="container">
