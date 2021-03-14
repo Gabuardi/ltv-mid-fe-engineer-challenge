@@ -1,0 +1,154 @@
+/* ************************************************** !!
+/* CSS CONTENTS ----------------------------------------
+--------------------------------------------------------
+--| Layout
+--| Components
+-----| Buttons
+-----| Forms
+-----| Navs
+--| Utilities
+-----| Colors
+--------------------------------------------------------
+----------------------------------------------------- */
+/* ************************************************************
+***************************************************************
+--- Layout ---
+****************************************************************/
+.navbar .container {
+  align-items: flex-start;
+}
+
+/* ************************************************************
+***************************************************************
+--- Components ---
+***************************************************************
+************************************************************ */
+/* ----------------------------------------- */
+/* Buttons */
+/* ----------------------------------------- */
+.btn {
+  width: 100%;
+  height: 50px;
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 6px;
+  color: #004A80;
+  outline: 0;
+  background-image: linear-gradient(225deg, #F2DA56 0%, #F6BC25 100%);
+  box-shadow: 0 3px 0 0 #A6953B, inset 0 1px 0 0 #FFFFFF;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+@media (min-width: 768px) {
+  .btn {
+    height: 70px;
+  }
+}
+
+/* ----------------------------------------- */
+/* Forms */
+/* ----------------------------------------- */
+.form-row {
+  margin-right: -10px;
+  margin-left: -10px;
+}
+
+.form-row > .col,
+.form-row > [class*=col-] {
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.form-group {
+  margin-bottom: 12px;
+}
+
+.form-control {
+  height: 50px;
+  background: #FFF;
+  box-shadow: inset 0 -1px 4px 0 rgba(0, 0, 0, 0.20);
+  border-radius: 3px !important;
+  font-size: 22px;
+}
+
+.form-control:focus {
+  box-shadow: inset 0 -1px 4px 0 rgba(0, 0, 0, 0.20);
+}
+
+.form-control.invalid {
+  border: 3px solid #DC0015;
+  border-radius: 3px 3px 0 0 !important;
+}
+
+.form-group__error-message {
+  padding: 4px 12px;
+  display: none;
+  font-size: 16px;
+  border-radius: 0 0 3px 3px;
+  color: #FFF;
+  background: #DC0015;
+}
+
+.form-control.invalid + .form-group__error-message {
+  display: block;
+}
+
+.form-control::placeholder {
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #9B9B9B;
+}
+
+@media (min-width: 768px) {
+  .form-control {
+    height: 70px;
+  }
+  .form-group__error-message {
+    position: absolute;
+  }
+}
+
+/* ----------------------------------------- */
+/* Navs */
+/* ----------------------------------------- */
+.navbar {
+  background: #004A80;
+  padding: 20px 0;
+}
+
+.navbar-brand {
+  padding: 0;
+  width: 173px;
+}
+
+.navbar__search-icon {
+  width: 23px;
+}
+
+/* ************************************************************
+***************************************************************
+--- Utilities ---
+***************************************************************
+************************************************************ */
+/* ----------------------------------------- */
+/* Colors */
+/* ----------------------------------------- */
+.text-primary {
+  color: #004A80 !important;
+}
+
+.text-dark {
+  color: #4A4A4A !important;
+}
+
+.bg-primary {
+  background-color: #004A80 !important;
+}
+
+.bg-gradient-light {
+  background-image: linear-gradient(0deg, #E6E6E6 0%, #FFFFFF 100%);
+}
