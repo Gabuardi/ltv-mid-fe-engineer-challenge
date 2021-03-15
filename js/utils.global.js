@@ -34,8 +34,14 @@ window.utils = (function utils() {
     });
   }
 
+  // ===========================================================================================
+  function formatPhoneNumber(phoneNumber) {
+    return '(' + phoneNumber.substring(0, 3) + ') ' + phoneNumber.substring(3, 6) + "-" + phoneNumber.substring(6, 10);
+  }
+
   return {
-    setFormValidation: setFormValidation
+    setFormValidation: setFormValidation,
+    formatPhoneNumber: formatPhoneNumber
   }
 })();
 

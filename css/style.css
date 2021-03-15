@@ -45,6 +45,15 @@ h5 {
   color: #004A80;
 }
 
+a {
+  color: #004A80;
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
 header {
   padding: 24px 0 52px;
 }

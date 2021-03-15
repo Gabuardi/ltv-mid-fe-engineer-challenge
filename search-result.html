@@ -34,31 +34,31 @@
       <h2 id="result-subtext" class="text-dark"></h2>
     </div>
     <!----<< RESULT CARD >>---->
-    <div class="result-card">
+    <div id="result-card" class="result-card d-none">
       <div class="result-card__avatar">
         <img src="img/icn_person.svg" alt="person icon">
       </div>
       <div class="w-100">
-        <h4 id="user-name" class="name"></h4>
-        <p id="user-description" class="user-description"></p>
+        <h4 id="record-name"></h4>
+        <p id="record-description"></p>
         <div class="row">
           <div class="col-md-6">
             <h5>Address</h5>
-            <p id="address" class="address"></p>
+            <p id="record-address"></p>
           </div>
           <div class="col-md-6">
             <h5>Phone Numbers</h5>
-            <div class="phone-num"></div>
+            <ul id="record-phones-list"></ul>
           </div>
         </div>
         <div class="row mt-3">
           <div class="col-md-6">
             <h5>Email</h5>
-            <p id="email" class="email"></p>
+            <p id="record-email"></p>
           </div>
           <div class="col-md-6">
             <h5>Relatives</h5>
-            <div class="relatives"></div>
+            <ul id="record-relatives-list"></ul>
           </div>
         </div>
       </div>
@@ -109,6 +109,7 @@
 
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK" crossorigin></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin></script>
+<script src="js/utils.global.js"></script>
 <script src="js/app.js"></script>
 <script src="js/result.js"></script>
 </body>
