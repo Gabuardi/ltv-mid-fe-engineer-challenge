@@ -35,12 +35,19 @@ window.utils = (function utils() {
   }
 
   // ===========================================================================================
+  function searchRecord(email) {
+    var url = 'https://ltv-data-api.herokuapp.com/api/v1/records.json?email=' + email;
+    return $.get(url);
+  }
+
+  // ===========================================================================================
   function formatPhoneNumber(phoneNumber) {
     return '(' + phoneNumber.substring(0, 3) + ') ' + phoneNumber.substring(3, 6) + "-" + phoneNumber.substring(6, 10);
   }
 
   return {
     setFormValidation: setFormValidation,
+    searchRecord: searchRecord,
     formatPhoneNumber: formatPhoneNumber
   }
 })();

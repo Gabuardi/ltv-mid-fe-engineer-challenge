@@ -1,21 +1,37 @@
 $(function () {
   // --------------------- INIT ---------------------------------------------
-  var recordsData = getRecordData();
-  if (recordsData.length !== 0) {
-    $('#result-count').text("1 Result");
-    $('#result-subtext').text('Look at the result below to see the details of the person you’re searched for.');
-    writeResultCard(recordsData[0]);
-    $('#result-card').removeClass('d-none');
-  } else {
-    $('#result-count').text("0 Results");
-    $("#result-subtext").text("Try starting a new search below");
-  }
+  var searchEmail = localStorage.searchEmail;
+
+  (function initSearchResultPage() {
+    var records = getRecordData();
+    if (records && records.length !== 0) {
+      // User landing to search result page with a record found
+      $('#result-count').text("1 Result");
+      $('#result-subtext').text('Look at the result below to see the details of the person you’re searched for.');
+      writeResultCard(records[0]);
+      $('#result-card').removeClass('d-none');
+    } else if (records && records.length === 0) {
+      // User landing to search result page with NO record found
+      $('#result-count').text("0 Results");
+      $("#result-subtext").text("Try starting a new search below");
+      $('#result-card').addClass('d-none');
+    } else if (searchEmail) {
+      // User landing to search result page with no record searched
+      var searchRequest = window.utils.searchRecord(searchEmail);
+      searchRequest.done(function (requestResponse) {
+        var searchResult = JSON.stringify(requestResponse);
+        localStorage.setItem('recordsData', searchResult);
+        initSearchResultPage();
+      });
+    }
+  })();
+
   // -------------------------------------------------------------------------
 
   function getRecordData() {
-    var localStorageItem = localStorage.userObject;
-    var recordsData = localStorageItem ? JSON.parse(localStorageItem) : [];
-    if (!Array.isArray(recordsData)) recordsData = [recordsData];
+    var localStorageItem = localStorage.recordsData;
+    var recordsData = localStorageItem && JSON.parse(localStorageItem);
+    if (recordsData && !Array.isArray(recordsData)) recordsData = [recordsData];
     return recordsData;
   }
 
