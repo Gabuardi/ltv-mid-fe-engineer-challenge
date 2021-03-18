@@ -39,10 +39,19 @@
       <button class="btn search-switch__btn" type="button">phone number</button>
     </div>
     <!----<< SEARCH FORM >>---->
-    <form id="search-form" class="form-row" novalidate>
+    <form id="email-form" class="form-row" novalidate>
       <div class="form-group col">
         <input class="form-control" type="email" name="email" placeholder="Enter an Email Address" pattern="\S+@\S+\.\S+" aria-label="email address" required>
         <div class="form-group__error-message">Please enter a valid email address</div>
+      </div>
+      <div class="form-group col-md-3 col-lg-2">
+        <button class="btn" type="submit">Go!</button>
+      </div>
+    </form>
+    <form id="phone-form" class="form-row" novalidate>
+      <div class="form-group col">
+        <input class="form-control" type="tel" name="phone" placeholder="Enter a phone number" minlength="10" maxlength="13" aria-label="phone number" required>
+        <div class="form-group__error-message">Please enter a valid phone number</div>
       </div>
       <div class="form-group col-md-3 col-lg-2">
         <button class="btn" type="submit">Go!</button>
