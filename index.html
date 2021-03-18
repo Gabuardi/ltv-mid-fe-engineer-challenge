@@ -1,116 +1,157 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Start Your Search!</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body>
-    <nav class="navbar d-flex justify-content-between">
-      <div class="container">
-        <a href="./index.html">
-          <img src="img/logo.svg" width="173" height="25" alt="">
-        </a>
-        <div>
-          <img src="img/icn_search.svg" width="23" height="23" alt="Search">
-          <img class="ml-4" src="img/icn_person.svg" alt="Profile">
-        </div>
-      </div>
-    </nav>
-    <section class="above-the-fold">
-      <div class="container">
-        <div class="headline text-white text-center mb-4 mb-md-5">
-          <h1 class="mb-3">Start Your Search!</h1>
-          <h2>Look up for people’s name, photos and online profiles with their email address or phone number. See what you find!</h2>
-        </div>
-        
-        <form>
-          <div class="input-group">
-            <input class="form-control" type="text" name="email" placeholder="Enter an Email Address" />
-            <p class="error-msg">Please enter a valid email address</p>
-            <button id="btn-search" class="btn btn-form-submit text-uppercase" type="submit">Go!</button>
-          </div>
-          <div class="d-flex justify-content-start justify-content-md-end align-items-center mt-4">
-            <img src="img/icn_lock.svg" alt="lock">
-            <p class="form-subtext">People in the search won't be notified.</p>
-          </div>
-        </form>
-      </div>
-    </section>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Start Your Search!</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin>
+  <link rel="stylesheet" href="css/bootstrap-custom.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!-- ---------------------------- -->
+<!-----------<< NAVBAR >>----------->
+<nav class="navbar">
+  <div class="container">
+    <a href="index.html" title="home">
+      <img class="navbar-brand" src="img/logo.svg" alt="company logo">
+    </a>
+    <div>
+      <img class="navbar__search-icon" src="img/icn_search.svg" alt="search">
+      <img class="ml-4" src="img/icn_person.svg" alt="profile">
+    </div>
+  </div>
+</nav>
 
-    <section class="features">
-      <div class="container">
-        <div class="headline">
-          <h1 class="text-primary text-center mb-2 mb-md-4">Here's How It Works</h1>
-          <h2 class="text-secondary">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h2>
-        </div>
-        <div class="row">
-          <div class="list-item col-md-6 d-flex align-items-lg-center">
-            <div class="list-circle">1</div>
-            <div class="list-text">
-              <h3>Lorem Ipsum</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </div>
-          </div>
-          <div class="list-item col-md-6 d-flex align-items-lg-center">
-            <div class="list-circle">4</div>
-            <div class="list-text">
-              <h3>Lorem Ipsum</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </div>
-          </div>
-          <div class="list-item col-md-6 d-flex align-items-lg-center">
-            <div class="list-circle">2</div>
-            <div class="list-text">
-              <h3>Lorem Ipsum</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </div>
-          </div>
-          <div class="list-item col-md-6 d-flex align-items-lg-center">
-            <div class="list-circle">5</div>
-            <div class="list-text">
-              <h3>Lorem Ipsum</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </div>
-          </div>
-          <div class="list-item col-md-6 d-flex align-items-lg-center mb-md-0">
-            <div class="list-circle">3</div>
-            <div class="list-text">
-              <h3>Lorem Ipsum</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </div>
-          </div>
-          <div class="list-item col-md-6 d-flex align-items-lg-center mb-md-0">
-            <div class="list-circle">6</div>
-            <div class="list-text">
-              <h3>Lorem Ipsum</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </div>
-          </div>
-        </div>
+<!-- ---------------------------- -->
+<!-----------<< HEADER >>----------->
+<header class="bg-primary">
+  <div class="container">
+    <div class="header__headline text-center text-white mb-4 mb-md-5">
+      <h1 class="mb-3">Start Your Search!</h1>
+      <h2>Look up for people’s name, photos and online profiles with their email address or phone number. See what you find!</h2>
+    </div>
+    <!----<< SEARCH FORM >>---->
+    <form id="search-form" class="form-row" novalidate>
+      <div class="form-group col">
+        <input class="form-control" type="email" name="email" placeholder="Enter an Email Address" pattern="\S+@\S+\.\S+" aria-label="email address" required>
+        <div class="form-group__error-message">Please enter a valid email address</div>
       </div>
-    </section>
-    
-    <footer class="footer">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-md-10">
-            <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-          </div>
-          <div class="col-md-2 text-center text-md-right pl-0 mt-3 mt-md-0">
-            <a href="#">Terms</a>
-            <a href="#">Privacy</a>
-          </div>
-        </div>
+      <div class="form-group col-md-3 col-lg-2">
+        <button class="btn" type="submit">Go!</button>
       </div>
-    </footer>
+    </form>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="js/app.js"></script>
-  </body>
+    <div class="d-flex justify-content-start justify-content-md-end align-items-center mt-3">
+      <img src="img/icn_lock.svg" alt="lock">
+      <p class="header__help-text">People in the search won't be notified.</p>
+    </div>
+  </div>
+</header>
+
+<!-- -------------------------------------- -->
+<!-----------<< FEATURES SECTION >>----------->
+<section class="bg-gradient-light">
+  <div class="container">
+    <div class="mb-3 mb-md-4 mb-lg-5">
+      <h1 class="text-primary text-center mb-2 mb-md-4">Here's How It Works</h1>
+      <h2 class="features__subtitle">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      </h2>
+    </div>
+    <!----<< FEATURE ITEMS >>---->
+    <div class="row">
+      <div class="col-md-6">
+        <div class="feature-item">
+          <div class="feature-item__circle">1</div>
+          <div>
+            <h3>Lorem Ipsum</h3>
+            <p class="feature-item__description">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua.
+            </p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-item__circle">2</div>
+          <div>
+            <h3>Lorem Ipsum</h3>
+            <p class="feature-item__description">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua.
+            </p>
+          </div>
+        </div>
+        <div class="feature-item mb-md-0">
+          <div class="feature-item__circle">3</div>
+          <div>
+            <h3>Lorem Ipsum</h3>
+            <p class="feature-item__description">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="feature-item">
+          <div class="feature-item__circle">4</div>
+          <div>
+            <h3>Lorem Ipsum</h3>
+            <p class="feature-item__description">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua.
+            </p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-item__circle">5</div>
+          <div class="list-text">
+            <h3>Lorem Ipsum</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+        </div>
+        <div class="feature-item mb-0">
+          <div class="feature-item__circle">6</div>
+          <div>
+            <h3>Lorem Ipsum</h3>
+            <p class="feature-item__description">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ---------------------------- -->
+<!-----------<< FOOTER >>----------->
+<footer>
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-10">
+        <p class="footer__text mb-0">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat.
+        </p>
+      </div>
+      <div class="footer__terms_and_privacy col-md-2 pl-0 mt-3 mt-md-0">
+        <a class="font-weight-bold" href="#">Terms</a> |
+        <a class="font-weight-bold" href="#">Privacy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK" crossorigin></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin></script>
+<script src="js/utils.global.js"></script>
+<script src="js/search-form.global.js"></script>
+</body>
 </html>
