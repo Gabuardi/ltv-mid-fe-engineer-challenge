@@ -2,6 +2,7 @@
 /* CSS CONTENTS ----------------------------------------
 --------------------------------------------------------
 --| General
+--| Search Switch
 --| [SECTION] Header
 --| [SECTION] Features
 --| [SECTION][RESULTS PAGE] Searching
@@ -86,6 +87,79 @@ section {
     font-size: 16px;
   }
 }
+
+/* ************************************************************
+***************************************************************
+--- Search Switch ---
+***************************************************************
+************************************************************ */
+.search-switch {
+  margin: 0 -3px 21px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-switch__label {
+  display: none;
+}
+
+.btn.search-switch__btn {
+  width: auto;
+  height: auto;
+  margin: 0 3.5px;
+  position: relative;
+  padding: 3px 11px;
+  font-size: 14px;
+  color: #F6BC25;
+  border: 3px solid #F6BC25;
+  background-image: none;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.btn.search-switch__btn.active {
+  color: #004A80;
+  background-color: #F6BC25;
+}
+
+.btn.search-switch__btn.active::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #F6BC25;
+  transform: translate(-50%, 100%);
+}
+
+@media (min-width: 768px) {
+  .search-switch {
+    margin: 0 0 21px;
+    justify-content: flex-start;
+  }
+
+  .search-switch__label {
+    margin-right: 14px;
+    padding: 3px 7px;
+    display: block;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #FFF;
+  }
+  .btn.search-switch__btn {
+    margin: 0 10px;
+    font-size: 16px;
+  }
+}
+
+
+
+
 
 /* ************************************************************
 ***************************************************************
