@@ -42,6 +42,16 @@
   -webkit-appearance: none;
 }
 
+.btn:hover {
+  background-image: linear-gradient(#F2DA56, #F2DA56);
+}
+
+.btn:focus,
+.btn:active {
+  background-image: linear-gradient(#F6BC25, #F6BC25);
+  box-shadow: 0 3px 0 0 #A6953B, inset 0 1px 0 0 #FFFFFF;
+}
+
 @media (min-width: 768px) {
   .btn {
     height: 70px;
