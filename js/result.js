@@ -2,7 +2,7 @@ $(function () {
   // --------------------- INIT ---------------------------------------------
   var searchEmail = localStorage.searchEmail;
 
-  (function initSearchResultPage() {
+  (function initSearchResultPage(sectionTransition) {
     var records = getRecordData();
     if (records && records.length !== 0) {
       // User landing to search result page with a record found
@@ -10,21 +10,23 @@ $(function () {
       $('#result-subtext').text('Look at the result below to see the details of the person you’re searched for.');
       writeResultCard(records[0]);
       $('#result-card').removeClass('d-none');
+      sectionTransition();
     } else if (records && records.length === 0) {
       // User landing to search result page with NO record found
       $('#result-count').text("0 Results");
       $("#result-subtext").text("Try starting a new search below");
       $('#result-card').addClass('d-none');
+      sectionTransition();
     } else if (searchEmail) {
       // User landing to search result page with no record searched
       var searchRequest = window.utils.searchRecord(searchEmail);
       searchRequest.done(function (requestResponse) {
         var searchResult = JSON.stringify(requestResponse);
         localStorage.setItem('recordsData', searchResult);
-        initSearchResultPage();
+        initSearchResultPage(showResultTransition);
       });
     }
-  })();
+  })(showExistentRecordTransition);
 
   // -------------------------------------------------------------------------
 
@@ -52,5 +54,15 @@ $(function () {
     record['relatives'].forEach(function (relative) {
       $recordEmailList.append('<li>' + relative + '</li>');
     });
+  }
+
+  function showExistentRecordTransition() {
+    $('#searching-section').hide();
+    $('#result-section').show();
+  }
+
+  function showResultTransition() {
+    $('#searching-section').fadeOut();
+    $('#result-section').fadeIn();
   }
 });
