@@ -4,6 +4,7 @@
 --| General
 --| [SECTION] Header
 --| [SECTION] Features
+--| [SECTION][RESULTS PAGE] Searching
 --| [SECTION][RESULTS PAGE] Result
 --| Footer
 --------------------------------------------------------
@@ -60,6 +61,10 @@ header {
 
 section {
   padding: 40px 0 52px;
+}
+
+.hidden {
+  display: none;
 }
 
 @media (max-width: 991px) {
@@ -169,10 +174,50 @@ section {
 
 /* ************************************************************
 ***************************************************************
+--- [SECTION][RESULTS PAGE] Searching ---
+***************************************************************
+************************************************************ */
+.searching-section {
+  min-height: 640px;
+  background-color: #F8F8F8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading-spinner {
+  width: 124px;
+  animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (min-height: 768px) {
+  .searching-section {
+    min-height: 873px;
+  }
+  .loading-spinner {
+    width: 154px;
+  }
+}
+
+@media (min-height: 991px) {
+  .searching-section {
+    min-height: 896px;
+  }
+}
+
+/* ************************************************************
+***************************************************************
 --- [SECTION][RESULTS PAGE] Result ---
 ***************************************************************
 ************************************************************ */
-.search-result {
+.search-result-section {
   min-height: 306px;
   background-color: #F8F8F8;
   display: flex;
@@ -199,7 +244,7 @@ section {
 }
 
 @media (min-width: 768px) {
-  .search-result {
+  .search-result-section {
     min-height: 512px;
   }
   .result-card__avatar {
@@ -216,7 +261,7 @@ section {
 }
 
 @media (min-width: 992px) {
-  .search-result {
+  .search-result-section {
     min-height: 455px;
   }
   .result-card__avatar {
