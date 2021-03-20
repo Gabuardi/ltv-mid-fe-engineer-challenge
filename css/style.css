@@ -64,7 +64,7 @@ section {
   padding: 40px 0 52px;
 }
 
-.hidden {
+.initially-hidden {
   display: none;
 }
 

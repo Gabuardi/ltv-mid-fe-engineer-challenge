@@ -35,11 +35,11 @@
     </div>
     <div class="search-switch">
       <div class="search-switch__label">type of search:</div>
-      <button class="btn search-switch__btn active" type="button">email address</button>
-      <button class="btn search-switch__btn" type="button">phone number</button>
+      <button class="btn search-switch__btn active js-form-switch-btn" type="button">email address</button>
+      <button class="btn search-switch__btn js-form-switch-btn" type="button">phone number</button>
     </div>
     <!----<< EMAIL SEARCH FORM >>---->
-    <form id="email-form" class="form-row" novalidate>
+    <form id="email-form" class="form-row js-form-switch-target" data-switch="target" novalidate>
       <div class="form-group col">
         <input class="form-control" type="email" name="email" placeholder="Enter an Email Address" pattern="\S+@\S+\.\S+" aria-label="email address" required>
         <div class="form-group__error-message">Please enter a valid email address</div>
@@ -49,7 +49,7 @@
       </div>
     </form>
     <!----<< PHONE SEARCH FORM >>---->
-    <form id="phone-form" class="form-row" novalidate>
+    <form id="phone-form" class="form-row d-none js-form-switch-target" novalidate>
       <div class="form-group col">
         <input class="form-control" type="tel" name="phone" placeholder="Enter a phone number" minlength="10" maxlength="13" aria-label="phone number" required>
         <div class="form-group__error-message">Please enter a valid phone number</div>
