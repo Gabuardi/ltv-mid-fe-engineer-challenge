@@ -1,14 +1,12 @@
 $(function () {
   // --------------------- INIT ---------------------------------------------
-  utils.setFormValidation('#email-form', emailFormSubmitHandler);
-  // utils.setFormValidation('#phone-form', )
+  utils.setFormValidation('#email-form', formSubmitHandler);
+  utils.setFormValidation('#phone-form', formSubmitHandler)
   // -------------------------------------------------------------------------
 
-  function emailFormSubmitHandler(formValue) {
-    var email = formValue.email.toLowerCase();
-    var searchData = {email: email};
+  function formSubmitHandler(formValue) {
     localStorage.clear();
-    localStorage.setItem("searchData", JSON.stringify(searchData));
+    localStorage.setItem("searchData", JSON.stringify(formValue));
     window.location.href = "search-result.html";
   }
 });

@@ -23,7 +23,6 @@ $(function () {
       var searchRequest = window.utils.searchRecord(searchData);
       searchRequest.done(function (requestResponse) {
         var searchResult = JSON.stringify(requestResponse);
-        console.log(requestResponse);
         localStorage.setItem('recordsData', searchResult);
         initSearchResultPage(showResultTransition);
       });
