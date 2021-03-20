@@ -2,6 +2,7 @@
 /* CSS CONTENTS ----------------------------------------
 --------------------------------------------------------
 --| General
+--| Form Switch
 --| [SECTION] Header
 --| [SECTION] Features
 --| [SECTION][RESULTS PAGE] Searching
@@ -63,7 +64,7 @@ section {
   padding: 40px 0 52px;
 }
 
-.hidden {
+.initially-hidden {
   display: none;
 }
 
@@ -86,6 +87,79 @@ section {
     font-size: 16px;
   }
 }
+
+/* ************************************************************
+***************************************************************
+--- Form Switch ---
+***************************************************************
+************************************************************ */
+.form-switch {
+  margin: 0 -3px 21px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-switch__label {
+  display: none;
+}
+
+.btn.form-switch__btn {
+  width: auto;
+  height: auto;
+  margin: 0 3.5px;
+  position: relative;
+  padding: 3px 11px;
+  font-size: 14px;
+  color: #F6BC25;
+  border: 3px solid #F6BC25;
+  background-image: none;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.btn.form-switch__btn.active {
+  color: #004A80;
+  background-color: #F6BC25;
+}
+
+.btn.form-switch__btn.active::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #F6BC25;
+  transform: translate(-50%, 100%);
+}
+
+@media (min-width: 768px) {
+  .form-switch {
+    margin: 0 0 21px;
+    justify-content: flex-start;
+  }
+
+  .form-switch__label {
+    margin-right: 14px;
+    padding: 3px 7px;
+    display: block;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #FFF;
+  }
+  .btn.form-switch__btn {
+    margin: 0 10px;
+    font-size: 16px;
+  }
+}
+
+
+
+
 
 /* ************************************************************
 ***************************************************************

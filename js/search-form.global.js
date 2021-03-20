@@ -1,12 +1,19 @@
 $(function () {
   // --------------------- INIT ---------------------------------------------
-  utils.setFormValidation('#search-form', submitFormHandler);
+  var $formSwitchButtons = $('.js-form-switch-btn');
+  var $formSwitchTargets = $('.js-form-switch-target');
+  $formSwitchButtons.click(formSwitchTriggerClickHandler);
+  utils.setFormValidation('#email-form', formSubmitHandler);
+  utils.setFormValidation('#phone-form', formSubmitHandler);
   // -------------------------------------------------------------------------
+  function formSwitchTriggerClickHandler() {
+    $formSwitchButtons.toggleClass('active')
+    $formSwitchTargets.toggleClass('d-none');
+  }
 
-  function submitFormHandler(formValue) {
-    var email = formValue.email.toLowerCase();
+  function formSubmitHandler(formValue) {
     localStorage.clear();
-    localStorage.setItem("searchEmail", email);
+    localStorage.setItem("searchData", JSON.stringify(formValue));
     window.location.href = "search-result.html";
   }
 });

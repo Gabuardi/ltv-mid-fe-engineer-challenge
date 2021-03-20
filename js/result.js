@@ -1,6 +1,6 @@
 $(function () {
   // --------------------- INIT ---------------------------------------------
-  var searchEmail = localStorage.searchEmail;
+  var searchData = localStorage.searchData;
 
   (function initSearchResultPage(sectionTransition) {
     var records = getRecordData();
@@ -17,9 +17,10 @@ $(function () {
       $("#result-subtext").text("Try starting a new search below");
       $('#result-card').addClass('d-none');
       sectionTransition();
-    } else if (searchEmail) {
+    } else if (searchData) {
       // User landing to search result page with no record searched
-      var searchRequest = window.utils.searchRecord(searchEmail);
+      searchData = JSON.parse(searchData);
+      var searchRequest = window.utils.searchRecord(searchData);
       searchRequest.done(function (requestResponse) {
         var searchResult = JSON.stringify(requestResponse);
         localStorage.setItem('recordsData', searchResult);
