@@ -2,7 +2,7 @@
 /* CSS CONTENTS ----------------------------------------
 --------------------------------------------------------
 --| General
---| Search Switch
+--| Form Switch
 --| [SECTION] Header
 --| [SECTION] Features
 --| [SECTION][RESULTS PAGE] Searching
@@ -90,21 +90,21 @@ section {
 
 /* ************************************************************
 ***************************************************************
---- Search Switch ---
+--- Form Switch ---
 ***************************************************************
 ************************************************************ */
-.search-switch {
+.form-switch {
   margin: 0 -3px 21px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.search-switch__label {
+.form-switch__label {
   display: none;
 }
 
-.btn.search-switch__btn {
+.btn.form-switch__btn {
   width: auto;
   height: auto;
   margin: 0 3.5px;
@@ -118,12 +118,12 @@ section {
   box-shadow: none;
 }
 
-.btn.search-switch__btn.active {
+.btn.form-switch__btn.active {
   color: #004A80;
   background-color: #F6BC25;
 }
 
-.btn.search-switch__btn.active::after {
+.btn.form-switch__btn.active::after {
   content: '';
   position: absolute;
   bottom: -3px;
@@ -137,12 +137,12 @@ section {
 }
 
 @media (min-width: 768px) {
-  .search-switch {
+  .form-switch {
     margin: 0 0 21px;
     justify-content: flex-start;
   }
 
-  .search-switch__label {
+  .form-switch__label {
     margin-right: 14px;
     padding: 3px 7px;
     display: block;
@@ -151,7 +151,7 @@ section {
     text-transform: uppercase;
     color: #FFF;
   }
-  .btn.search-switch__btn {
+  .btn.form-switch__btn {
     margin: 0 10px;
     font-size: 16px;
   }
