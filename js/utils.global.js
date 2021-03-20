@@ -35,8 +35,9 @@ window.utils = (function utils() {
   }
 
   // ===========================================================================================
-  function searchRecord(email) {
-    var url = 'https://ltv-data-api.herokuapp.com/api/v1/records.json?email=' + email;
+  function searchRecord(searchData) {
+    var searchQueryString = $.param(searchData);
+    var url = 'https://ltv-data-api.herokuapp.com/api/v1/records.json?' + searchQueryString;
     return $.get(url);
   }
 
