@@ -302,7 +302,7 @@ section {
 .result-card {
   max-width: 980px;
   margin: 40px auto;
-  padding: 40px;
+  padding: 24px 15px;
   display: flex;
   border-radius: 30px;
   background-color: #FFF;
@@ -320,6 +320,9 @@ section {
 @media (min-width: 768px) {
   .search-result-section {
     min-height: 512px;
+  }
+  .result-card {
+    padding: 40px;
   }
   .result-card__avatar {
     width: 63px;
