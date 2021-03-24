@@ -362,6 +362,7 @@ footer {
 
 .footer__text {
   font-size: 15px;
+  font-weight: 300;
   color: #999;
   line-height: 20px;
 }
