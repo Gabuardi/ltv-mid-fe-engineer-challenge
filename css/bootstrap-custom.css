@@ -96,7 +96,8 @@
 .form-group__error-message {
   padding: 4px 12px;
   display: none;
-  font-size: 16px;
+  font-size: 14px;
+  font-weight: 300;
   border-radius: 0 0 3px 3px;
   color: #FFF;
   background: #DC0015;
@@ -120,6 +121,7 @@
   }
   .form-group__error-message {
     position: absolute;
+    font-size: 16px;
   }
 }
 
