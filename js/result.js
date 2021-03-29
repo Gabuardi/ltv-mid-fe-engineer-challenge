@@ -26,6 +26,10 @@ $(function () {
         localStorage.setItem('recordsData', searchResult);
         initSearchResultPage(showResultTransition);
       });
+    } else {
+      $('#result-count').text("No search data");
+      $('#result-subtext').text('Please use the search form below to make a email address or phone number search.');
+      sectionTransition();
     }
   })(showExistentRecordTransition);
 
