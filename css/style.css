@@ -2,6 +2,7 @@
 /* CSS CONTENTS ----------------------------------------
 --------------------------------------------------------
 --| General
+-----| Scroll Bar
 --| Form Switch
 --| [SECTION] Header
 --| [SECTION] Features
@@ -86,6 +87,22 @@ section {
   h2 {
     font-size: 18px;
   }
+}
+
+/* ----------------------------------------- */
+/* Scroll Bar */
+/* ----------------------------------------- */
+body::-webkit-scrollbar {
+  width: 9px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: #F8F8F8;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #F6BC25;
+  border-radius: 20px;
 }
 
 /* ************************************************************
