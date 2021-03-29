@@ -131,8 +131,9 @@ body::-webkit-scrollbar-thumb {
   color: #F6BC25;
   border: 3px solid #F6BC25;
   background-image: none;
-  background-color: transparent;
+  background-color: #004A80;
   box-shadow: none;
+  transition: background-color 250ms;
 }
 
 .btn.form-switch__btn.active {
@@ -140,8 +141,9 @@ body::-webkit-scrollbar-thumb {
   background-color: #F6BC25;
 }
 
-.btn.form-switch__btn.active::after {
+.btn.form-switch__btn::before {
   content: '';
+  opacity: 0;
   position: absolute;
   bottom: -3px;
   left: 50%;
@@ -150,6 +152,13 @@ body::-webkit-scrollbar-thumb {
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
   border-top: 5px solid #F6BC25;
+  transform: translate(-50%, 0);
+  transition-property: opacity, transform;
+  transition-duration: 250ms;
+}
+
+.btn.form-switch__btn.active::before {
+  opacity: 1;
   transform: translate(-50%, 100%);
 }
 
