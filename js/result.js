@@ -26,6 +26,10 @@ $(function () {
         localStorage.setItem('recordsData', searchResult);
         initSearchResultPage(showResultTransition);
       });
+    } else {
+      $('#result-count').text("No search data");
+      $('#result-subtext').text('Please use the search form below to make a email address or phone number search.');
+      sectionTransition();
     }
   })(showExistentRecordTransition);
 
@@ -57,13 +61,30 @@ $(function () {
     });
   }
 
+  // =============================================
+  // Page Transitions
   function showExistentRecordTransition() {
     $('#searching-section').hide();
     $('#result-section').show();
   }
 
   function showResultTransition() {
-    $('#searching-section').fadeOut();
-    $('#result-section').fadeIn();
+    stopSpinnerAnimation().then(function () {
+      $('#searching-section').fadeOut();
+      $('#result-section').fadeIn();
+    });
   }
+
+  function stopSpinnerAnimation() {
+    var $loadingSpinnerWrapper = $('#loading-spinner-wrapper');
+    var wrapperAnimationDuration = parseFloat($loadingSpinnerWrapper.css('animation-duration')) * 1000;
+    var animationEnd = $.Deferred();
+    $loadingSpinnerWrapper.addClass('pause');
+    setTimeout(function () {
+      animationEnd.resolve();
+    }, wrapperAnimationDuration);
+    return animationEnd;
+  }
+
+  showResultTransition();
 });

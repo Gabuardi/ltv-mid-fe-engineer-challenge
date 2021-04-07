@@ -2,6 +2,7 @@
 /* CSS CONTENTS ----------------------------------------
 --------------------------------------------------------
 --| General
+-----| Scroll Bar
 --| Form Switch
 --| [SECTION] Header
 --| [SECTION] Features
@@ -88,6 +89,22 @@ section {
   }
 }
 
+/* ----------------------------------------- */
+/* Scroll Bar */
+/* ----------------------------------------- */
+body::-webkit-scrollbar {
+  width: 9px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: #F8F8F8;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #F6BC25;
+  border-radius: 20px;
+}
+
 /* ************************************************************
 ***************************************************************
 --- Form Switch ---
@@ -114,8 +131,9 @@ section {
   color: #F6BC25;
   border: 3px solid #F6BC25;
   background-image: none;
-  background-color: transparent;
+  background-color: #004A80;
   box-shadow: none;
+  transition: background-color 250ms;
 }
 
 .btn.form-switch__btn.active {
@@ -123,8 +141,9 @@ section {
   background-color: #F6BC25;
 }
 
-.btn.form-switch__btn.active::after {
+.btn.form-switch__btn::before {
   content: '';
+  opacity: 0;
   position: absolute;
   bottom: -3px;
   left: 50%;
@@ -133,6 +152,13 @@ section {
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
   border-top: 5px solid #F6BC25;
+  transform: translate(-50%, 0);
+  transition-property: opacity, transform;
+  transition-duration: 250ms;
+}
+
+.btn.form-switch__btn.active::before {
+  opacity: 1;
   transform: translate(-50%, 100%);
 }
 
@@ -260,12 +286,25 @@ section {
   align-items: center;
 }
 
-.loading-spinner {
-  width: 124px;
-  animation: spin 1s infinite linear;
+.loading-spinner-wrapper {
+  animation: spinAround 2s 1 ease-out;
+  animation-play-state: paused;
 }
 
-@keyframes spin {
+.loading-spinner {
+  width: 124px;
+  animation: spinAround 1s infinite linear;
+}
+
+.loading-spinner-wrapper.pause {
+  animation-play-state: running;
+}
+
+.pause .loading-spinner {
+  animation-play-state: paused;
+}
+
+@keyframes spinAround {
   to {
     transform: rotate(360deg);
   }
