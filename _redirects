@@ -1,0 +1,3 @@
+# Redirects used for Netlify
+/index.html           /
+/search-result.html  /result
