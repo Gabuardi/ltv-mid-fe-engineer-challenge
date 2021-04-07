@@ -286,12 +286,25 @@ body::-webkit-scrollbar-thumb {
   align-items: center;
 }
 
-.loading-spinner {
-  width: 124px;
-  animation: spin 1s infinite linear;
+.loading-spinner-wrapper {
+  animation: spinAround 2s 1 ease-out;
+  animation-play-state: paused;
 }
 
-@keyframes spin {
+.loading-spinner {
+  width: 124px;
+  animation: spinAround 1s infinite linear;
+}
+
+.loading-spinner-wrapper.pause {
+  animation-play-state: running;
+}
+
+.pause .loading-spinner {
+  animation-play-state: paused;
+}
+
+@keyframes spinAround {
   to {
     transform: rotate(360deg);
   }
